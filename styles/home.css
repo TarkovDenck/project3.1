@@ -53,10 +53,10 @@
     display: flex; justify-content: space-between; padding: 0rem 8rem;
 }   
 .mainGreen{
-    background-image: url("super-rts-systems.jpg");
+    background-image: url("../Image/super-rts-systems.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0rem 0;
+    padding: 0rem 0rem;
 }
 .mainGreen .img-res{
     /* display: none; */
@@ -95,6 +95,7 @@
 }
 .white-subcontent1 .h1-1{
     font-size: 16px; letter-spacing: 6px; color: #376EFF; font-weight: 700;
+    text-align: center;
 }
 .white-subcontent1 .h1-2{
     font-family: 'Times New Roman', Times, serif; font-size: 34px; font-weight: 550; line-height: 50px;
@@ -109,7 +110,12 @@
     gap: 4px;
 }
 .white-content1-2{
+    text-align: center;
     gap: 55px;
+    flex-basis: fit-content;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .white-content2{
     background-color: #1f2127;
@@ -126,6 +132,12 @@
 }
 .white-subcontent2 p{
     text-align: left;font-size: 15px; line-height: 18px;
+}
+.white-subcontent2 .h1-1{
+
+}
+.white-sidecontent2 p{
+    width: 140px;
 }
 .white-content3{
     gap: 10rem;
