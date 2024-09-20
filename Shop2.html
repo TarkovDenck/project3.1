@@ -1,0 +1,584 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* .glow {
+        animation: glow 1s ease-in-out infinite alternate;
+        }
+        @-webkit-keyframes glow {
+        from {
+            text-shadow: 0 0 20px #fff, 0 0 1px #fff, 0 0 1px #004de6, 0 0 1px #004de6, 0 0 15px #6095ff, 0 0 18px #6095ff, 0  px #6095ff;
+        }
+        
+        to {
+            text-shadow: 0 0 20px #fff, 0 0 30px #8fb1ff, 0 0 60px #8fb1ff, 0 0 60px #8fb1ff, 0 0 60px #8fb1ff, 0 0 70px #8fb1ff, 0 0 80px #8fb1ff;
+        }
+        } */
+        .shadow-image{
+            box-shadow: 15px 15px 25px rgba(15, 15, 29, 0.5); 
+        }
+        .dark{
+            background-color: #1f2127;
+            background: -webkit-linear-gradient(0deg, #232446, #1f2127);
+            color: #e3eaff;
+        }
+        .light{ 
+            background-color: #e3eaff;
+            background: -webkit-linear-gradient(0deg, #d1dbff, #ffffff);
+            color: #1f2127;
+        }
+        .gradient-text{
+            background: -webkit-linear-gradient(0deg, #151ce8, #3fcbfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text2{
+            background: -webkit-linear-gradient(0deg, #464cff, #5ad6ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .warnaijo{
+            background-color: #376EFF;
+            padding: 0rem 0rem
+        }
+        .warnaputih{
+            background-color: #ffffff;
+        }
+        .flexing-row{
+            display: flex;
+            flex-direction: row;
+        }
+        .flexing-col{
+            display: flex;
+            flex-direction: column;
+        }
+        .trueneutral{
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            width: 170px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navlinks-style{
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .navlogo{
+            gap: 1rem;
+            background: -webkit-linear-gradient(0deg, #151ce8, #3fcbfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .navcontent{
+            gap: 2rem; font-size: large;
+        }
+        .extranavbar{
+            /* justify-content: space-between; */
+            gap: 5rem;
+        }
+        .navbar{
+            display: flex; justify-content: space-between; padding: 0rem 8rem;
+        }   
+        .mainGreen{
+            background-image: url("super-rts-systems.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 0rem 0;
+        }
+        .mainGreen .img-res{
+            /* display: none; */
+        }
+        .content{
+            height: 500px;
+            justify-content: space-between; 
+            align-items: center; 
+            padding-bottom: 3rem; 
+            padding: 2rem 8rem;
+            padding-bottom: 3rem;
+            color: #ffffff;
+        }
+        .content-main{
+            width: 384px;
+            gap: 6px;
+        }
+        .content-main .h1-1{
+            font-size: 16px; letter-spacing: 6px;
+        }
+        .content-main .h1-2{
+            font-family: 'Times New Roman', Times, serif; font-size: 40px; font-weight: 550; line-height: 50px;
+        }
+        .content-main .p{
+            line-height: 18.75px;
+        }
+        .maincontent2{
+            background: -webkit-linear-gradient(0deg, #c7d3ff, #fefff9);
+            padding: 0rem 0rem;
+            gap: 5rem;
+        }
+        .white-content1{
+            gap: 0px;
+        }
+        .white-subcontent1{
+            padding: 4rem 0;
+        }
+        .white-subcontent1 .h1-1{
+            font-size: 40px; letter-spacing: 6px; color: #000000; font-weight: 700;
+        }
+        .white-subcontent1 .h1-2{
+            font-family: 'Times New Roman', Times, serif; font-size: 34px; font-weight: 550; line-height: 50px;
+        }
+        .white-subcontent1 p{
+            text-align: center;font-size: 20px;
+        }
+        .white-content1 .images{
+            gap: 68px;
+        }
+        .white-content2{
+            gap: 10rem;
+        }
+        .white-content2 image{
+            gap: 9rem;
+        }
+        .white-content2 img{
+            width: 500px;
+            border-radius: 10px;
+        }
+        .white-subcontent2 h1{
+            font-family: 'Times New Roman', Times, serif; font-size: 40px; font-weight: 550; line-height: 50px;
+        }
+        .white-subcontent2 p{
+            text-align: left;font-size: 15px; line-height: 18px;
+        }
+        .white-content3{
+            gap: 10rem;
+        }
+        .white-content3 image{
+            gap: 9rem;
+        }
+        .white-content3 img{
+            width: 500px;
+            border-radius: 10px;
+        }
+        .white-subcontent3 h1{
+            font-family: 'Times New Roman', Times, serif; font-size: 40px; font-weight: 550; line-height: 50px;
+        }
+        .white-subcontent3 p{
+            text-align: left;font-size: 15px; line-height: 18px;
+        }
+        .white-content4{
+            padding: 4rem 0;
+            gap: 0px;
+        }
+        .white-content4 .images{
+            gap: 68px;
+        }
+        .white-content4{
+
+        }
+        .white-subcontent4-2{
+            width: 500px;
+            
+        }
+        footer{
+            /* text-align: center; */
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            width: auto;    
+        }
+        .footer-subcontent{
+            display: flex;
+            flex-direction: row;
+            width: 1440px;
+            justify-content: space-between;
+        }
+        .footer .images{
+            gap: 1rem;
+            display: flex;
+            flex-direction: row;
+            /* width: auto; */
+            /* justify-content: space-between; */
+        }
+        .footer img{
+            width: 16px;
+        }
+        .footer-subcontent p{
+            margin-top: 12px;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
+
+        @media screen and (max-width: 375px) {
+            body{
+                width: 375px;
+            }
+            .navbar{
+                padding: 1rem;
+                overflow: hidden;
+            }
+            .navcontent{
+                display: none;
+            }
+            .warnaijo{
+                padding: 1rem 0;
+            }
+            .warnaputih{
+                width: 375px;
+                padding: 2rem 0;
+            }
+            .mainGreen{
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .mainGreen .img-og{
+                width: 325px;
+                /* height: 196; */
+                /* display: none; */
+            }
+            .warnaputih{
+                padding: 2rem 2rem;
+            }
+            .content-main{
+                padding: 1rem 2rem;
+                gap: 0;
+            }
+            .content-main .h1-1{
+                font-size: 14px;
+            }
+            .content-main .h1-2{
+                font-size: 20px;
+                line-height: 25px;
+                letter-spacing: 2px;
+            }
+            .white-content1 .images{
+                display: flex;
+                flex-direction: column;
+            }
+            .white-subcontent1 .h1-1{
+            font-size: 16px; letter-spacing: 6px; color: #74C69D; font-weight: 700;
+            }
+            .white-subcontent1 .h1-2{
+                font-family: 'Times New Roman', Times, serif; font-size: 24px; font-weight: 550; line-height: 50px;
+            }
+            .white-subcontent1 p{
+                text-align: center;font-size: 16px;
+            }
+            .white-content2{
+                flex-direction: column;
+                gap: 2rem;
+            }
+            .white-content2 img{
+                width: 325px;
+            }
+            .white-content2 image{
+                gap: 0rem;
+            }
+            .white-subcontent2 h1{
+                font-family: 'Times New Roman', Times, serif; font-size: 24px; font-weight: 550; line-height: 50px;
+            }
+            .white-subcontent2 p{
+                text-align: justify;font-size: 15px; line-height: 18px;
+            }
+            .white-content3{
+                flex-direction: column-reverse;
+                gap: 2rem;
+            }
+            .white-content3 img{
+                width: 325px;
+            }
+            .white-content3 image{
+                gap: 0rem;
+            }
+            .white-subcontent3 h1{
+                font-family: 'Times New Roman', Times, serif; font-size: 24px; font-weight: 550; line-height: 50px;
+            }
+            .white-subcontent3 p{
+                text-align: justify;font-size: 15px; line-height: 18px;
+            }
+            .white-content4 img{
+                width: 279px;
+            }
+            .white-content4{
+                gap: 55px;
+            }
+            .white-content4 .images{
+                flex-direction: column;
+                gap: 68px;
+            }
+            .white-subcontent4 .h1-1{
+                font-size: 16px; letter-spacing: 6px; color: #74C69D; font-weight: 700;
+            }
+            .white-subcontent4 .h1-2{
+                font-family: 'Times New Roman', Times, serif; font-size: 34px; font-weight: 550; line-height: 50px;
+            }
+            .white-subcontent4 p{
+                text-align: center; font-size: 20px;
+            }
+            footer{
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                /* width: auto; */
+                padding: 2rem 2rem;
+            }
+            .footer-subcontent{
+                display: flex;
+                flex-direction: column;
+                width: 375px;
+                justify-content: center;
+                align-items: center;
+            }
+            .footer .images{
+                gap: 1rem;
+                display: flex;
+                flex-direction: row;
+                /* width: auto; */
+                /* justify-content: space-between; */
+            }
+            .footer img{
+                width: 12px;
+            }
+            .footer-subcontent p{
+                /* margin-top: 12px; */
+                justify-content: center;
+                align-items: center;
+                color: #ffffff;
+            }
+            }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="container-fluid warnaijo">
+        <div class="container-fluid navbar navbar-expand-lg extranavbar warnaputih">
+            <div class="flexing-row navlogo">
+                <!-- <img src="logo.svg" alt="logo"> -->
+                <h1 class="display-6" style="font-weight: 500; color: #000000; letter-spacing: 15px;">LERO</h1>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="home.html" style="color: #000000;">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #000000;">Shop</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="position: absolute; margin-left: 23rem;">
+                    <a class="dropdown-item" href="Shop1.html">Low Specifications PC</a>
+                    <a class="dropdown-item" href="Shop2.html">Medium Specifications PC</a>
+                    <a class="dropdown-item" href="Shop3.html">High Specifications PC</a>
+                  </div>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" style="color: #000000;">Services</a>
+                  <div class="wow"></div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" style="color: #000000;">Contact</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid warnaputih flexing-col maincontent2">
+        <div class="flexing-col trueneutral white-content1">
+            <div class="flexing-col trueneutral white-subcontent1 dark">
+                <h1 class="h1-1" style="color: #f9faff;">
+                    <span class="gradient-text">
+                        READY TO SHIP 
+                    </span>
+                    GAMING PC
+                </h1>
+                <p class="lead" style="padding: 0 8rem;">
+                    Eager to dive into the gaming universe without the wait? PowerGPU offers an exclusive selection of ready to ship prebuilt gaming PCs, delivering the unmatched performance you’ve come to expect from our custom builds, but without the build time. Our expedited shipping ensures these systems are on their way to you either the same day or the next business day. With fresh stock added every Friday, your next gaming adventure is just a click away. Stay ahead of the game and check back regularly for the latest in high-powered, ready to ship gaming machines.   
+                </p>
+            </div>
+            
+            <!-- <div class="flexing-row trueneutral images">
+                <img src="google.svg" alt="">
+                <img src="microsoft.svg" alt="">
+                <img src="airbnb.svg" alt="">
+                <img src="facebook.svg" alt="">
+                <img src="spotify.svg" alt="">
+            </div>
+            <button type="button" class="btn btn-dark button">
+                <p class="lead my-auto" style="color: #ffffff; font-weight: 500; text-align: center; ">
+                    Learn More
+                </p>
+            </button> -->
+        </div>
+
+        <div class="flexing-row trueneutral white-content2">
+            <div class="flexing-row trueneutral image">
+                <img class="shadow-image" src="Image/gamingpc2.1.jpg" alt="">
+            </div>
+            <div class="flexing-col white-subcontent2">
+                <h1 class="display-1">
+                    AMD Power SILVER
+                </h1>
+                <h3 class="gradient-text glow" style="font-weight: 600; font-size: 36px;">
+                    $1,999.99
+                </h3>
+                <h5 class="lead">Build Specifications:</h5>
+                    <ul style="opacity: 90%;">
+                        <li>
+                            THERMALTAKE View 270 TG ARGB Case – Black
+                        </li>
+                        <li>
+                            THERMALTAKE TH240 V2 ARGB Liquid CPU Cooler – Black
+                        </li>
+                        <li>
+                            AMD Ryzen 7 7800X3D Processor
+                        </li>
+                        <li>
+                            MSI MAG X670E Tomahawk WiFi DDR5 ATX Motherboard
+                        </li>
+                        <li>
+                            KINGSTON SKC3000d 2TB Gen4 NVMe SSD
+                        </li>
+                        <li>
+                            NVIDIA GeForce RTX 4080 Super (16GB) (ASUS, MSI, or GIGABYTE)
+                        </li>
+                        <li>
+                            850W 80+ Gold Fully-Modular Power Supply (be quiet! or COUGAR)
+                        </li>
+                        <li>
+                            Windows 11
+                        </li>
+                    </ul>
+                <button type="button" class="btn btn-dark button ">
+                    <p class="lead my-auto" style="color: #ffffff; font-weight: 500; text-align: center; ">
+                        PRE-ORDER NOW
+                    </p>
+                </button>
+            </div>
+        </div>
+        <hr class="light" style="width: 75%; margin-left: auto; margin-right: auto;">
+        <div class="flexing-row trueneutral white-content2">
+            <div class="flexing-row trueneutral image">
+                <img class="shadow-image" src="Image/gamingpc2.2.jpg" alt="">
+            </div>
+            <div class="flexing-col white-subcontent2">
+                <h1>
+                    Lorem ipsum dolor sit amet<br>consectetur 
+                </h1>
+                <p class="opacity-50">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos<br>error ipsum, voluptate culpa nesciunt delectus iste?.
+                </p>
+                <button type="button" class="btn btn-dark button ">
+                    <p class="lead my-auto" style="color: #ffffff; font-weight: 500; text-align: center; ">
+                        Learn More
+                    </p>
+                </button>
+            </div>
+        </div>
+        <hr class="light" style="width: 75%; margin-left: auto; margin-right: auto;">
+        <div class="flexing-col trueneutral white-content1">
+            <div class="flexing-col trueneutral white-subcontent1" style="text-align: justify;">
+                <h1 class="h1-1" style="color: #1f2127;">
+                    WHY CHOOSE LERO'S
+                    <span class="gradient-text">
+                        READY TO SHIP GAMING PCs 
+                    </span>
+                    ?
+                </h1>
+                <p class="lead" style="padding: 0 8rem; font-weight: 400;">
+                    We will jump straight into action with systems ready to ship in as little as 24 hours. As new, powerful gaming rigs added every week, ensuring variety and the latest hardware. You can experience the PowerGPU difference with high-quality parts and impeccable build quality, therefore enjoying peak performance right out of the box, with zero bloatware and flawless cable management.
+                </p>
+                <p class="lead" style="padding: 0 8rem; font-weight: 500;">
+                    You can rest easy knowing your prebuilt PC has been tested and optimized by experts, ready for any challenge you throw its way.
+                </p>
+            </div>
+        </div>
+
+        <!-- <div class="flexing-row trueneutral white-content3">
+            <div class="flexing-col white-subcontent3">
+                <h1>
+                    Lorem ipsum dolor sit<br>amet consectetur 
+                </h1>
+                <p class="opacity-50">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>Suscipit nemo hic quos, ab, dolor aperiam nobis cum est eos<br>error ipsum, voluptate culpa nesciunt delectus iste?.
+                </p>
+                <button type="button" class="btn btn-dark button ">
+                    <p class="lead my-auto" style="color: #ffffff; font-weight: 500; text-align: center; ">
+                        Learn More
+                    </p>
+                </button>
+            </div>
+            <div class="flexing-row trueneutral image">
+                <img src="GambarPutih-2.svg" alt="">
+            </div>
+        </div> -->
+
+        <div class="flexing-col trueneutral white-content4 dark">
+            <div class="flexing-col trueneutral white-subcontent4">
+                <h1 class="" style="color: #f9faff; font-size: 40px;">
+                    Get Ahead of 
+                    <span class="gradient-text">
+                        the Deals 
+                    </span>
+                    !
+                </h1>
+            </div>
+            <form class="flexing-row" style="gap: 2rem; padding: 4rem 0;">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                </div>
+                <div class="my-auto">
+                    <button type="submit" class="btn btn-primary button">Submit</button>
+                </div>
+              </form>
+              <div class="white-subcontent4-2">
+                <div class="mx- flexing-row " style="justify-content: space-between;">
+                    <h1 class="gradient-text2" style=" letter-spacing: 10px;">
+                        LERO
+                    </h1>
+                    <div style="display: flex; align-items: center; gap: 1rem;  ">
+                        <img style="width: 25px; " src="icon\x-social-media-black-icon 1.svg" alt="">
+                        <img style="width: 25px; " src="icon\black-instagram-icon 1.svg" alt="">
+                        <img style="width: 25px; " src="icon\youtube-icon 1.svg" alt="">
+                    </div>
+                </div>
+                <p class="lead" style="font-weight: 400;">
+                    At LERO, we use the highest quality parts backed by manufacturer warranties to ensure the longevity of each custom build. We are the go to company for custom PCs that fit your need.<br><br>
+                    Location: <span class="gradient-text2" style="font-weight: 600;">762 Park Ave, Youngsville, NC 27596</span><br><br>
+                    Support Contact:  <span class="gradient-text2" style="font-weight: 600;">252-LERO4U</span>
+                </p>
+              </div>
+        </div>
+    </div>
+    <div class="container-fluid flexing-row trueneutral warnaijo footer">
+        <div class="footer-subcontent">
+            <div class="images">
+                <img src="icon/Group 33.svg" alt="">
+                <img src="icon/Group 34.svg" alt="">
+                <img src="icon/Group 35.svg" alt="">
+                <img src="icon/Group 36.svg" alt="">
+                <img src="icon/Group 37.svg" alt="">
+                <img src="icon/Group 38.svg" alt="">
+                <img src="icon/Group 39.svg" alt="">
+            </div>
+            <p  class="lead">
+                © Start, 2022. All rights reserved.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
