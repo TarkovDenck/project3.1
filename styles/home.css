@@ -64,6 +64,10 @@
     padding: 4px 4px;
     border-radius: 50%;
 }
+.pp-dropdown-new{
+    right: 0;
+    left: none;
+}
 .mainGreen{
     background-image: url("../Image/super-rts-systems.jpg");
     background-repeat: no-repeat;

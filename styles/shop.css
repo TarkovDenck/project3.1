@@ -15,7 +15,7 @@
         }
         .dark{
             background-color: #1f2127;
-            background: -webkit-linear-gradient(0deg, #232446, #1f2127);
+            background: -webkit-linear-gradient(180deg, #0f0f2d, #010103);
             color: #e3eaff;
         }
         .light{ 
