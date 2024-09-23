@@ -85,16 +85,21 @@
 }
 .maincontent2{
     padding: 0rem 0rem;
-    gap: 5rem;
+    /* gap: 5rem; */
+}
+.maincontent2-padding{
+    gap: 0;
+    padding: 5rem 0;
 }
 .white-content1{
     gap: 55px;
 }
 .white-content1-extrapadding{
-    padding-top: 4rem;
+    padding: 4rem 0;
 }
 .white-subcontent1 .h1-1{
     font-size: 16px; letter-spacing: 6px; color: #376EFF; font-weight: 700;
+    font-size: 32px;
     text-align: center;
 }
 .white-subcontent1 .h1-2{
@@ -126,6 +131,9 @@
 }
 .white-content2 image{
     gap: 9rem;
+}
+.reason-image{
+    width: 500px; border-radius: 5px;
 }
 .white-subcontent2 h1{
     font-family: 'Times New Roman', Times, serif; font-size: 32px; font-weight: 550; line-height: 50px;
@@ -206,6 +214,100 @@ footer{
     justify-content: center;
     align-items: center;
     color: #ffffff;
+}
+
+@media (max-width: 1400px){
+    .adminreview{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .reviews h1{
+        font-size: 36px; 
+    }
+    .white-content1-3{
+        flex-direction: column;
+    }
+    .white-content1-4{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .white-sidecontent3-newer h5{
+        font-size: 24px; 
+    }
+    .white-sidecontent3 h5{
+        font-size: 24px;
+    }
+    .white-sidecontent3 p{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1080px){
+    .white-subcontent1 .h1-1{
+        font-size: 24px; letter-spacing: 6px; color: #376EFF; font-weight: 700;
+        text-align: center;
+    }
+    .white-sidecontent2 img{
+        width: 50px;
+    }
+    .white-sidecontent2 p{
+        font-size: 16px
+    }
+    .white-content2{
+        gap: 3rem;
+    }
+    .reason-content{ 
+        flex-direction: column;
+    }
+    .reason-image{ 
+        width: 350px;
+    }
+    .gaping-subcontent2 {
+        gap: 2rem;
+    }
+    .white-subcontent2 h1{
+        font-size: 20px;
+        width: 300px;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .white-subcontent2 p{
+        font-size: 16px;
+        width: 450px;
+        text-align: justify;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .adminreview{
+    }
+    .reviews h1{
+        font-size: 28px; 
+    }
+    .white-content1-3{
+        flex-direction: column;
+    }
+    .white-content1-4{
+        flex-direction: column;
+    }
+    .white-sidecontent3-newer h5{
+        font-size: 16px; 
+    }
+    .white-sidecontent3-newer p{
+        font-size: 16px; 
+    }
+    .white-sidecontent3-newer{
+        gap: 6px;
+    }
+    .star img{
+        width: 20px;
+    }
+    .white-sidecontent3 h5{
+        font-size: 14px;
+    }
+    .white-sidecontent3 p{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 375px) {
