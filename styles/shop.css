@@ -59,6 +59,13 @@
             justify-content: center;
             align-items: center;
         }
+        .navbar-main{
+            width: auto;
+        }
+        .nav-content{
+            margin: 0 0;
+            width: auto;
+        }
         .navlinks-style{
             text-decoration: none;
             color: #ffffff;
@@ -77,8 +84,13 @@
             gap: 5rem;
         }
         .navbar{
-            display: flex; justify-content: space-between; padding: 0rem 8rem;
+            display: flex; justify-content: space-between; padding: 0rem 4rem;
         }   
+        .navpp{
+            width: 60px;
+            padding: 4px 4px;
+            border-radius: 50%;
+        }
         .mainGreen{
             background-image: url("super-rts-systems.jpg");
             background-repeat: no-repeat;

@@ -114,3 +114,44 @@ body {
 .register-link p a:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1080px) {
+    .wrapper{
+        scale: 75%;
+    }
+    
+}
+@media (max-width: 880px) {
+    /* body{
+        display: none;
+    } */
+    .wrapper{
+        scale: 60%;
+    }
+}
+@media (max-width: 650px) {
+    .wrapper{
+        scale: 60%;
+    }
+}
+@media (max-width: 500px) {
+    .wrapper{
+        scale: 60%;
+    }
+}
+
+@media (max-width: 350px) {
+    .wrapper{
+        scale: 50%;
+    }
+}
+@media (max-width: 280px) {
+    .wrapper{
+        scale: 40%;
+    }
+}
+@media (max-width: 200px) {
+    .wrapper{
+        scale: 30%;
+    }
+}
