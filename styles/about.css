@@ -57,8 +57,8 @@
     width: auto;
 }
 .nav-content{
-    margin: 0 0;
-    width: auto;
+    /* margin: 0 0; */
+    width: -webkit-fill-available;
 }
 .navlinks-style{
     text-decoration: none;
@@ -72,6 +72,12 @@
 }
 .navcontent{
     gap: 2rem; font-size: large;
+    justify-content: space-between;
+
+}
+.navbar-collapse-sorting{
+    width: -webkit-fill-available;
+    justify-content: space-between;
 }
 .extranavbar{
     /* justify-content: space-between; */
