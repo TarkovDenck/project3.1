@@ -3,15 +3,17 @@
 }
 .dark{
     background-color: #1f2127;
-    background: -webkit-linear-gradient(0deg, #1e1f38, #1f2127);
+    background: -webkit-linear-gradient(180deg, #0f0f2d, #010103);
     color: #e3eaff;
 }
+.warnaputih { 
+    background-color: #e3eaff;
+    background: -webkit-linear-gradient(90deg, #e6ebff, #ffffff);
+    color: #1f2127;
+}   
 .warnaijo{
     background-color: #376EFF;
     padding: 0rem 0rem
-}
-.warnaputih{
-    background-color: #ffffff;
 }
 .flexing-row{
     display: flex;
@@ -34,10 +36,13 @@
 }
 .navbar-main{
     width: auto;
+    position: sticky;
+    top: 0;
+    z-index: 3;
 }
 .nav-content{
-    margin: 0 0;
-    width: auto;
+    /* margin: 0 0; */
+    width: -webkit-fill-available;
 }
 .navlinks-style{
     text-decoration: none;
@@ -51,6 +56,12 @@
 }
 .navcontent{
     gap: 2rem; font-size: large;
+    justify-content: space-between;
+
+}
+.navbar-collapse-sorting{
+    width: -webkit-fill-available;
+    justify-content: space-between;
 }
 .extranavbar{
     /* justify-content: space-between; */
@@ -182,6 +193,7 @@
     gap: 4px;
     width: 400px;
     text-align: center;
+    padding: 0 5vh;
 }
 .white-sidecontent3 h5{
     font-size: 28px;
@@ -293,7 +305,7 @@ footer{
     }
     .white-subcontent2 p{
         font-size: 16px;
-        width: 450px;
+        width: auto;
         text-align: justify;
         margin-left: auto;
         margin-right: auto;
@@ -308,6 +320,9 @@ footer{
     }
     .white-content1-4{
         flex-direction: column;
+    }
+    .white-sidecontent3{
+        width: auto;
     }
     .white-sidecontent3-newer h5{
         font-size: 16px; 
@@ -354,6 +369,8 @@ footer{
     .mainGreen-content{
         margin-left: auto;
         margin-right: auto;
+        width: auto;
+        padding: 0 2rem;
     }
 }
 
@@ -376,22 +393,23 @@ footer{
         display: none;
     }
     .warnaijo{
-        padding: 1rem 0;
+        padding: 2rem 0;
     }
     .warnaputih{
-        width: 375px;
+        width: auto;
         padding: 2rem 0;
+        display: flex;
     }
     .mainGreen{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .mainGreen .img-og{
         width: 325px;
         /* height: 196; */
         /* display: none; */
     }
-    .warnaputih{
+    .warnaputihspecific{
         padding: 2rem 2rem;
     }
     .content-main{
@@ -411,7 +429,7 @@ footer{
         flex-direction: column;
     }
     .white-subcontent1 .h1-1{
-    font-size: 16px; letter-spacing: 6px; color: #74C69D; font-weight: 700;
+    font-size: 16px; letter-spacing: 6px; font-weight: 700;
     }
     .white-subcontent1 .h1-2{
         font-family: 'Times New Roman', Times, serif; font-size: 24px; font-weight: 550; line-height: 50px;
@@ -424,7 +442,10 @@ footer{
         gap: 2rem;
     }
     .white-content2 img{
-        width: 325px;
+        width: 35vh;
+    }
+    .shadow-image{
+        overflow-x: hidden;
     }
     .white-content2 image{
         gap: 0rem;
@@ -434,6 +455,7 @@ footer{
     }
     .white-subcontent2 p{
         text-align: justify;font-size: 15px; line-height: 18px;
+        padding: 0 2rem;
     }
     .white-content3{
         flex-direction: column-reverse;
