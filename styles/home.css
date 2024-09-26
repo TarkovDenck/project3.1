@@ -3,15 +3,17 @@
 }
 .dark{
     background-color: #1f2127;
-    background: -webkit-linear-gradient(0deg, #1e1f38, #1f2127);
+    background: -webkit-linear-gradient(180deg, #0f0f2d, #010103);
     color: #e3eaff;
 }
+.warnaputih { 
+    background-color: #e3eaff;
+    background: -webkit-linear-gradient(90deg, #e6ebff, #ffffff);
+    color: #1f2127;
+}   
 .warnaijo{
     background-color: #376EFF;
     padding: 0rem 0rem
-}
-.warnaputih{
-    background-color: #ffffff;
 }
 .flexing-row{
     display: flex;

@@ -111,7 +111,7 @@
 }
 .container-general p{
     font-size: 1.25rem;
-    width: 500px;
+    width: auto;
     font-weight: 400;
     text-align: justify;
 }
@@ -225,6 +225,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    width: 50vh;
 }
 .forward img{
     width: 100%;
@@ -273,12 +274,269 @@
     border-style: groove;
 }
 
-@media (max-width: 1080px){
-    .mission{
-        flex-direction: row;
+@media (max-width: 1024px){
+    .main p{
+        padding: 0 4rem;
+        font-size: 1.25rem;
+    }
+    .intro p{
+        width: 500px;
+    }
+    .card-typography h2{
+        font-size: 1.5rem;
+    }
+    .card-typography p{
+        font-size: 1rem;
+    }
+    .mission-content{
+        width: 100vh;
+    }
+    .forward-content{
+        width: 100vh;
+    }
+    .cardlist{
+        align-items: center;
+        flex-direction: column;    
     }
 }
 
+@media (max-width: 768px){
+    .container-general h1{
+        font-size: 2.4rem;
+    }
+    .container-general p{
+        font-size: 14px;
+    }
+    .button-green{
+        width: 133px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    .button-blue{
+        width: 133px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    .button-red{
+        width: 133px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    .main p{
+        padding: 0 4rem;
+        font-size: 1rem;
+    }
+    .container-general h1{
+        font-size: 2.4rem;
+    }
+    .container-general p{
+        font-size: 14px;
+    }
+    .slanted-rect{
+        margin-right: 15vh;
+        width: 15%;
+        right: 45%;
+
+    }
+    .card-typography p{
+        font-size: 14px;
+    }
+    .pillars{
+        padding: 1vh 1vh;
+    }
+    .pillars-title-size{
+        font-size: 2.4rem;
+    }
+    .card-typography  .list-p{
+        font-size: 12px;
+    }
+    .bottom-text{
+        font-size: 1rem;
+    }
+    .footer-subcontent{
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 640px){
+    .container-general p{
+        font-size: 12px;
+    }
+    .slanted-rect{
+        margin-right: 10vh;
+        transform: skew(-15deg);
+    }
+    .intro-p-container {
+        width: 80%;
+    }
+    .intro p{
+        width: auto;
+    }
+    .mission{
+        flex-direction: column;
+    }
+    .mission-content{
+        width: auto;
+    }
+    .mission img{
+        width: 30vh;
+    }
+    .forward{
+        flex-direction: column;
+    }
+    .forward-content{
+        width: auto;
+    }
+    .forward img{
+        width: 30vh;
+    }
+    .legacy p{
+        width: auto;
+    }
+    .pillars-title-size{
+        font-size: 2rem;
+    }
+    .cardlist{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cardsize{
+        width: auto;
+    }
+    .card-design{
+        gap: 2rem;
+    }
+    .card-typography p {
+        text-align: center;
+    }
+    .pillars-title{
+        padding: 2vh 2vh;
+    }
+    .pillars-title-size {
+        font-size: 1.5rem;
+    }
+    .cardsize{
+        width: -webkit-fill-available;
+    }
+    .card-typography h2{
+        font-size: 1rem;
+    }
+
+    .white-subcontent4-2 {
+        width: min-content;
+    }
+    .footer .images{
+        gap: 5px;
+    }
+    .footer img{
+        width: 10px;
+    }
+    .footer-subcontent p{
+        font-size: 12px;
+    }
+}
+@media (max-width: 350px){
+    .main{
+        padding: 5vw 1vw;
+        gap: 1rem;
+    }
+    .navbar{
+        padding: 1rem 0rem;
+    }
+    .container-general h1{
+        font-size: 1.5rem;
+    }
+    .container-general p{
+        font-size: 8px;
+        padding: 0 2rem;
+    }
+    .pillars-title{
+        padding: 2vh 2vh;
+    }
+    .pillars-title-size {
+        font-size: 1.5rem;
+    }
+    .cardsize{
+        width: -webkit-fill-available;
+    }
+    .card-typography h2{
+        font-size: 1rem;
+    }
+    .bottomtitle-responsive350 {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .white-subcontent4-2{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .bottom-text{
+        font-size: 12px;
+    }
+    .footer-subcontent{
+        gap: 12px;
+    }
+    .footer-subcontent p{
+        font-size: 12px;
+    }
+}
+
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    opacity: 0;
+    animation: fadeInRight 1s ease-in forwards; /* Adjust the timing and easing as needed */
+}
 
 
 
