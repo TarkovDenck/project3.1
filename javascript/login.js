@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 confirmButtonText: 'Great'
             }).then(() => {
                 // Logic for successful login can be added here
-                window.location.href = '../HomePage.html';
+                window.location.href = 'project3.1/home.html';
             });
         } else {
             Swal.fire({
