@@ -1,16 +1,19 @@
 <?php
-
 $servername = "localhost";
-$username = "root";
-$password = ""; 
-$database = "pcprebuild"; 
+$username = "root"; 
+$password = "";     
+$dbname = "pcprebuild";
 
 
-$conn = new mysqli($servername, $username, $password, $database);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'error', 'message' => 'Database connection failed: ' . $conn->connect_error]);
+    exit; 
+}
+
+
 ?>

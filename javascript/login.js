@@ -1,40 +1,48 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('loginForm').addEventListener('submit', function(event) {
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
         event.preventDefault();
 
-        var username = document.getElementById('username').value.trim();
-        var password = document.getElementById('password').value.trim();
+        var formData = new FormData();
+        formData.append('username', document.getElementById('username').value.trim());
+        formData.append('password', document.getElementById('password').value.trim());
 
-        console.log('Username:', username);  // Debugging
-        console.log('Password:', password);  // Debugging
-
-        // Validasi untuk email Gmail
-        var gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-
-        if (username === "" || password === "") {
+        fetch('Php/login.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            console.log('Raw response:', response); 
+            if (!response.ok) throw new Error('Network response was not ok');
+            return response.json(); 
+        })
+        .then(data => {
+            console.log(data);
+            if (data.status === 'success') {
+                Swal.fire({
+                    title: 'Login Success!',
+                    text: data.message,
+                    icon: 'success',
+                    confirmButtonText: 'Great'
+                }).then(() => {
+                    window.location.href = 'home.html'; 
+                });
+            } else {
+                Swal.fire({
+                    title: 'Error!',
+                    text: data.message,
+                    icon: 'error',
+                    confirmButtonText: 'Try Again'
+                });
+            }
+        })
+        .catch(error => {
+            console.error('Error occurred:', error);
             Swal.fire({
                 title: 'Error!',
-                text: 'Username or password cannot be empty.',
+                text: 'Something went wrong! \n' + error.message,
                 icon: 'error',
                 confirmButtonText: 'Try Again'
             });
-        } else if (gmailRegex.test(username) || username === password) {
-            Swal.fire({
-                title: 'Login Success!',
-                text: 'You have successfully logged in with your Gmail account.',
-                icon: 'success',
-                confirmButtonText: 'Great'
-            }).then(() => {
-                // Logic for successful login can be added here
-                window.location.href = 'project3.1/home.html';
-            });
-        } else {
-            Swal.fire({
-                title: 'Error!',
-                text: 'Incorrect username or password.',
-                icon: 'error',
-                confirmButtonText: 'Try Again'
-            });
-        }
+        });
     });
 });
