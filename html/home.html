@@ -1,3 +1,6 @@
+<?php
+session_start(); // Mulai session
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,12 +37,17 @@
                   </li>
                 </ul>
                 <div>
-                    <img class="navpp" href="#" role="button" id="dropdownAccountLink" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  src="Image\pp.png" alt="" style="">
-                    <div class="dropdown-menu pp-dropdown-new" aria-labelledby="dropdownAccountLink" style="position: absolute; left: auto;">
-                        <a class="dropdown-item" href="login.html">Log in</a>
-                        <hr style="width: 75%; margin-left: auto; margin-right: auto;">
-                        <a class="dropdown-item" href="#">Log out</a>
-                      </div>
+                    <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in']): ?>
+                        <!-- Jika user sudah login -->
+                        <div class="dropdown">
+                            <div class="dropdown-menu pp-dropdown-new" aria-labelledby="dropdownAccountLink">
+                                <a class="dropdown-item" href="logout.php">Log out</a>
+                            </div>
+                        </div>
+                    <?php else: ?>
+                        <!-- Jika user belum login -->
+                        <a href="login.html"btn btn-primary">Log in</a>
+                    <?php endif; ?>
                 </div>
               </div>
             </div>

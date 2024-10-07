@@ -24,8 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
                     icon: 'success',
                     confirmButtonText: 'Great'
                 }).then(() => {
-                    window.location.href = 'home.html'; 
+                    
+                    window.location.href = 'home.php'; 
                 });
+                
             } else {
                 Swal.fire({
                     title: 'Error!',
