@@ -1,3 +1,12 @@
+<?php
+session_start(); // Mulai sesi
+
+//if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
+//    header("Location: login.html"); // Arahkan ke halaman login jika belum login
+//    exit(); // Hentikan eksekusi lebih lanjut
+//}
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,42 +28,33 @@
               <div class="collapse navbar-collapse navbar-collapse-sorting" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="home.html" style="color: #000000;">Home <span class="sr-only"></span></a>
+                    <a class="nav-link" href="home.php" style="color: #000000;">Home <span class="sr-only"></span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="catalog.html" style="color: #000000;">Shop</a>
-                    <!-- <div class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="position: absolute; right: 0;">
-                      <a class="dropdown-item" href="Shop1.html">Low Specifications PC</a>
-                      <a class="dropdown-item" href="Shop2.html">Medium Specifications PC</a>
-                      <a class="dropdown-item" href="Shop3.html">High Specifications PC</a>
-                    </div> -->
+                    <a class="nav-link" href="catalog.php" style="color: #000000;">Shop</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="about.html" style="color: #000000;">About us</a>
+                    <a class="nav-link" href="about.php" style="color: #000000;">About us</a>
                     <div class="wow"></div>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html" style="color: #000000;">Contact</a>
+                    <a class="nav-link" href="contact.php" style="color: #000000;">Contact</a>
                   </li>
                 </ul>
-                <div>
-                    <img class="navpp" href="#" role="button" id="dropdownAccountLink" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  src="Image\pp.png" alt="" style="">
-                    <div class="dropdown-menu pp-dropdown-new" aria-labelledby="dropdownAccountLink" style="position: absolute; left: auto;">
-                        <a class="dropdown-item" href="login.html">Log in</a>
-                        <hr style="width: 75%; margin-left: auto; margin-right: auto;">
-                        <a class="dropdown-item" href="#">Log out</a>
-                      </div>
+                <div >
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <div class="nav-item" style="gap: 2rem;">
+                            <!-- Menampilkan pesan selamat datang jika user sudah login -->
+                            Selamat datang, <?= htmlspecialchars($_SESSION['username']) ?>   
+                            <a href="PhP/logout.php?return_url=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>" class="btn btn-primary">Log out</a>
+                        </div>   
+                    <?php else: ?>
+                        <!-- Jika user belum login -->
+                        <a href="login.html" class="btn btn-primary">Log in</a>
+                    <?php endif; ?>
                 </div>
               </div>
             </div>
-            <!-- <img class="navpp" href="#" role="button" id="dropdownAccountLink" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  src="Image\pp.png" alt="" style="">
-            <div class="dropdown-menu pp-dropdown-new" aria-labelledby="dropdownAccountLink" style="position: absolute; left: auto;">
-                <a class="dropdown-item" href="Shop1.html">1</a>
-                <hr style="width: 75%; margin-left: auto; margin-right: auto;">
-                <a class="dropdown-item" href="Shop2.html">2</a>
-                <hr style="width: 75%; margin-left: auto; margin-right: auto;">
-                <a class="dropdown-item" href="Shop3.html">3</a>
-              </div> -->
           </nav>
       <div class="about">
         <section class="main-bg ">

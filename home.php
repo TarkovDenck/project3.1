@@ -32,23 +32,23 @@ session_start(); // Mulai sesi
                     <a class="nav-link" href="home.php" style="color: #000000;">Home <span class="sr-only"></span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="catalog.html" style="color: #000000;">Shop</a>
+                    <a class="nav-link" href="catalog.php" style="color: #000000;">Shop</a>
                   </li>
                   <li class="nav-item active">
-                    <a class="nav-link" href="about.html" style="color: #000000;">About us</a>
+                    <a class="nav-link" href="about.php" style="color: #000000;">About us</a>
                     <div class="wow"></div>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact.html" style="color: #000000;">Contact</a>
+                    <a class="nav-link" href="contact.php" style="color: #000000;">Contact</a>
                   </li>
                 </ul>
-                <div>
-                <?php if (isset($_SESSION['username'])): ?>
-                        <li class="nav-item">
+                <div >
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <div class="nav-item" style="gap: 2rem;">
                             <!-- Menampilkan pesan selamat datang jika user sudah login -->
-                            Selamat datang, <?= htmlspecialchars($_SESSION['username']) ?> 
-                            <a href="Php/logout.php" class="btn btn-primary">Log out</a>
-                        </li>    
+                            Selamat datang, <?= htmlspecialchars($_SESSION['username']) ?>   
+                            <a href="PhP/logout.php?return_url=<?php echo urlencode($_SERVER['REQUEST_URI']); ?>" class="btn btn-primary">Log out</a>
+                        </div>   
                     <?php else: ?>
                         <!-- Jika user belum login -->
                         <a href="login.html" class="btn btn-primary">Log in</a>
