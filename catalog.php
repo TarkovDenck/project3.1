@@ -41,7 +41,7 @@ session_start(); // Mulai sesi
               <a class="nav-link" href="contact.php" style="color: #000000;">Contact</a>
             </li>
           </ul>
-          <div >
+                <div >
                     <?php if (isset($_SESSION['username'])): ?>
                         <div class="nav-item" style="gap: 2rem;">
                             <!-- Menampilkan pesan selamat datang jika user sudah login -->
