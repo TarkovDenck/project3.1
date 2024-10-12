@@ -54,6 +54,9 @@ session_start(); // Mulai sesi
             <li class="nav-item">
               <a class="nav-link" href="contact.php" style="color: #000000;">Contact</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comment.html" style="color: #000000;">Comments</a>
+            </li>
           </ul>
                 <div >
                     <?php if (isset($_SESSION['username'])): ?>

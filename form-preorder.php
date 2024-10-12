@@ -54,6 +54,9 @@ if (!isset($_SESSION['logged_in']) || !$_SESSION['logged_in']) {
             <li class="nav-item">
               <a class="nav-link" href="contact.html" style="color: #000000;">Contact</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comment.html" style="color: #000000;">Comments</a>
+            </li>
           </ul>
           <div >
             <?php if (isset($_SESSION['username'])): ?>
